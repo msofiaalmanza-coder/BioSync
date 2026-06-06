@@ -7,6 +7,6 @@ class VistaBienvenida(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        uic.loadUi("main.ui", self)
+        uic.loadUi("Vista/main.ui", self)
 
         self.setWindowTitle("BioSync")

@@ -7,6 +7,6 @@ class VistaLogin(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        uic.loadUi("login.ui", self)
+        uic.loadUi("Vista/login.ui", self)
 
         self.setWindowTitle("Login")

@@ -7,7 +7,7 @@ class VistaPrincipal(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        uic.loadUi("principal.ui", self)
+        uic.loadUi("Vista/principal.ui", self)
 
         self.inicializar()
 
@@ -44,7 +44,7 @@ class VistaPrincipal(QMainWindow):
                 "ToZero",
                 "ToZero Inverse"
             ])
-            
+
         if hasattr(self, "comboMorfologia"):
 
             self.comboMorfologia.clear()
