@@ -31,3 +31,21 @@ class Controlador:
         self.modelo_tabular = ModeloTabular()
 
         self.conectar_eventos()
+
+    def conectar_eventos(self):
+
+        self.main.btnIngresar.clicked.connect(
+            self.abrir_login
+        )
+
+        self.main.btnSalir.clicked.connect(
+            self.cerrar_app
+        )
+
+        self.login.btnLogin.clicked.connect(
+            self.validar_login
+        )
+
+        self.login.btnVolver.clicked.connect(
+            self.volver_main
+        )
