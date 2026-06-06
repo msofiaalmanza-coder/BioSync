@@ -9,6 +9,8 @@ class VistaPrincipal(QMainWindow):
 
         uic.loadUi("Vista/principal.ui", self)
 
+        self.setWindowTitle("BioSync")
+
         self.inicializar()
 
     def inicializar(self):
@@ -37,21 +39,23 @@ class VistaPrincipal(QMainWindow):
         if hasattr(self, "comboSegmentacion"):
 
             self.comboSegmentacion.clear()
+
             self.comboSegmentacion.addItems([
-                "Binary",
-                "Binary Inverse",
-                "Trunc",
-                "ToZero",
-                "ToZero Inverse"
+                "binary",
+                "binary_inv",
+                "trunc",
+                "tozero",
+                "tozero_inv"
             ])
 
         if hasattr(self, "comboMorfologia"):
 
             self.comboMorfologia.clear()
+
             self.comboMorfologia.addItems([
-                "Erosion",
-                "Dilation",
-                "Opening",
-                "Closing",
-                "Gradient"
+                "erosion",
+                "dilatacion",
+                "apertura",
+                "cierre",
+                "gradiente"
             ])
