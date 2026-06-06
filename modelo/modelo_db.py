@@ -7,7 +7,7 @@ class ModeloDB:
             host="127.0.0.1",
             user="root",
             password="",
-            database="biomedica_db",
+            database="biosync",
             port=3306
         )
 
