@@ -966,7 +966,8 @@ background-color: rgb(255, 255, 255);</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <item>
         <property name="text">
