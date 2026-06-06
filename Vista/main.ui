@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>447</width>
-    <height>441</height>
+    <height>438</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,26 +32,26 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="lblLogo">
      <property name="geometry">
       <rect>
-       <x>260</x>
-       <y>10</y>
-       <width>161</width>
-       <height>171</height>
+       <x>270</x>
+       <y>20</y>
+       <width>141</width>
+       <height>111</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../../../Downloads/logo.png</pixmap>
+      <pixmap>../../logogood.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="txtUsuario">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -69,7 +69,7 @@ background-color: rgb(240, 240, 240);</string>
       <string>Entrar</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="btnSalir">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -86,7 +86,7 @@ background-color: rgb(240, 240, 240);</string>
       <string>Salir</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="lblSubtitulo">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -102,10 +102,27 @@ background-color: rgb(240, 240, 240);</string>
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Bienvenido al sistema de análisis biomédico&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <zorder>pushButton_2</zorder>
-    <zorder>label</zorder>
-    <zorder>label_2</zorder>
-    <zorder>pushButton</zorder>
+    <widget class="QLabel" name="lblTitulo">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>130</y>
+       <width>361</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 20pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;BioSync&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <zorder>btnSalir</zorder>
+    <zorder>lblSubtitulo</zorder>
+    <zorder>txtUsuario</zorder>
+    <zorder>lblTitulo</zorder>
+    <zorder>lblLogo</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

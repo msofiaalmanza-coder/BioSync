@@ -38,17 +38,22 @@
        <height>531</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(230, 230, 230);
+background-color: rgb(230, 230, 230);
+</string>
+     </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
        <string>Inicio</string>
       </attribute>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="lblUsuario">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>140</x>
          <y>50</y>
          <width>71</width>
          <height>41</height>
@@ -61,10 +66,10 @@
         <string>Usuario:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="lblRol">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>150</x>
          <y>130</y>
          <width>61</width>
          <height>41</height>
@@ -77,10 +82,10 @@
         <string>Rol:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="lblFecha">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>140</x>
          <y>100</y>
          <width>71</width>
          <height>21</height>
@@ -93,11 +98,11 @@
         <string>Fecha:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="lblFotoUsuario">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>180</y>
+         <x>180</x>
+         <y>200</y>
          <width>101</width>
          <height>111</height>
         </rect>
@@ -112,44 +117,55 @@
       <widget class="QLineEdit" name="lineEdit">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>200</x>
          <y>60</y>
          <width>113</width>
          <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>200</x>
          <y>140</y>
          <width>113</width>
          <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
       </widget>
       <widget class="QLineEdit" name="lineEdit_3">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>200</x>
          <y>101</y>
          <width>113</width>
          <height>20</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="btnCapturarFoto">
        <property name="geometry">
         <rect>
-         <x>140</x>
+         <x>180</x>
          <y>330</y>
          <width>101</width>
          <height>61</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
+
+background-color: rgb(194, 225, 252);</string>
        </property>
        <property name="text">
         <string>Tomar foto</string>
@@ -160,7 +176,7 @@
       <attribute name="title">
        <string>Imágenes médicas</string>
       </attribute>
-      <widget class="QPushButton" name="btnCargardicom">
+      <widget class="QPushButton" name="btnCargarDicom">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -208,7 +224,7 @@
         <string>Guardar excel</string>
        </property>
       </widget>
-      <widget class="QTableWidget" name="tableWidget">
+      <widget class="QTableWidget" name="tableMetadatos">
        <property name="geometry">
         <rect>
          <x>190</x>
@@ -218,7 +234,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QLabel" name="label_5">
+      <widget class="QLabel" name="lblAxial">
        <property name="geometry">
         <rect>
          <x>40</x>
@@ -234,7 +250,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Axial&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_6">
+      <widget class="QLabel" name="lblCoronal">
        <property name="geometry">
         <rect>
          <x>180</x>
@@ -250,7 +266,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Coronal&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_7">
+      <widget class="QLabel" name="lblSagital">
        <property name="geometry">
         <rect>
          <x>300</x>
@@ -266,7 +282,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Sagital&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QSlider" name="horizontalSlider">
+      <widget class="QSlider" name="sliderSagital">
        <property name="geometry">
         <rect>
          <x>280</x>
@@ -279,7 +295,7 @@
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="QSlider" name="horizontalSlider_2">
+      <widget class="QSlider" name="sliderCoronal">
        <property name="geometry">
         <rect>
          <x>160</x>
@@ -292,7 +308,7 @@
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="QSlider" name="horizontalSlider_3">
+      <widget class="QSlider" name="sliderAxial">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -305,7 +321,7 @@
         <enum>Qt::Horizontal</enum>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="btnZoom">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -366,8 +382,8 @@
       <widget class="QLabel" name="label_10">
        <property name="geometry">
         <rect>
-         <x>330</x>
-         <y>290</y>
+         <x>350</x>
+         <y>300</y>
          <width>101</width>
          <height>41</height>
         </rect>
@@ -379,11 +395,11 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tipo segmentación&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="btnSegmentar">
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>320</y>
+         <x>340</x>
+         <y>360</y>
          <width>131</width>
          <height>41</height>
         </rect>
@@ -398,8 +414,8 @@
       <widget class="QLabel" name="label_11">
        <property name="geometry">
         <rect>
-         <x>320</x>
-         <y>350</y>
+         <x>180</x>
+         <y>400</y>
          <width>131</width>
          <height>61</height>
         </rect>
@@ -414,10 +430,10 @@
       <widget class="QLabel" name="label_12">
        <property name="geometry">
         <rect>
-         <x>310</x>
-         <y>390</y>
-         <width>131</width>
-         <height>41</height>
+         <x>250</x>
+         <y>310</y>
+         <width>91</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -427,7 +443,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Kernel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="btnMorfologia">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -443,17 +459,17 @@
         <string>Aplicar morfología </string>
        </property>
       </widget>
-      <widget class="QSpinBox" name="spinBox">
+      <widget class="QSpinBox" name="spinKernel">
        <property name="geometry">
         <rect>
-         <x>410</x>
-         <y>400</y>
+         <x>280</x>
+         <y>330</y>
          <width>42</width>
          <height>22</height>
         </rect>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btnGuardarCSV">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -469,12 +485,95 @@
         <string>Guardar CSV</string>
        </property>
       </widget>
+      <widget class="QLabel" name="label_19">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>420</y>
+         <width>35</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;ZOOM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboSegmentacion">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>330</y>
+         <width>53</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>binary</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>binary_inv</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>trunc</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>tozero</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>tozero_inv</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="comboMorfologia">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>410</y>
+         <width>53</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>erosión</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>dilatación</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>apertura</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cierre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gradiente</string>
+        </property>
+       </item>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
        <string>Señales biomédicas</string>
       </attribute>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="btnCargarMat">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -490,7 +589,7 @@
         <string>cargar MAT</string>
        </property>
       </widget>
-      <widget class="QSpinBox" name="spinBox_2">
+      <widget class="QSpinBox" name="spinCanalInicial">
        <property name="geometry">
         <rect>
          <x>270</x>
@@ -500,7 +599,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QSpinBox" name="spinBox_3">
+      <widget class="QSpinBox" name="spinCanalFinal">
        <property name="geometry">
         <rect>
          <x>350</x>
@@ -542,7 +641,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Canal final&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="btnAgregarRuido">
        <property name="geometry">
         <rect>
          <x>340</x>
@@ -574,7 +673,7 @@
         <string>Mostrar Canales</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioEje0">
        <property name="geometry">
         <rect>
          <x>260</x>
@@ -590,7 +689,7 @@
         <string>x</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="radioEje1">
        <property name="geometry">
         <rect>
          <x>330</x>
@@ -606,7 +705,7 @@
         <string>y</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_3">
+      <widget class="QRadioButton" name="radioEje2">
        <property name="geometry">
         <rect>
          <x>410</x>
@@ -622,7 +721,7 @@
         <string>z</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="btnEstadisticas">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -638,7 +737,7 @@
         <string>Calcular Estadísticas</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_15">
+      <widget class="QLabel" name="lblGraficarPromedio">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -677,7 +776,7 @@
         <string>TextLabel</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_18">
+      <widget class="QLabel" name="lblGraficaDesviacion">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -695,7 +794,7 @@
       <attribute name="title">
        <string>Datos tabulares</string>
       </attribute>
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="btnCargardatos">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -705,29 +804,14 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
        </property>
        <property name="text">
-        <string>Cargar CSV</string>
+        <string>cargar archivos</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_13">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>90</y>
-         <width>131</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
-       </property>
-       <property name="text">
-        <string>Cargar excel</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboColumna1">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -737,7 +821,8 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <item>
         <property name="text">
@@ -760,7 +845,7 @@
         </property>
        </item>
       </widget>
-      <widget class="QComboBox" name="comboBox_2">
+      <widget class="QComboBox" name="comboColumna2">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -770,7 +855,8 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="frame">
         <bool>true</bool>
@@ -781,7 +867,7 @@
         </property>
        </item>
       </widget>
-      <widget class="QComboBox" name="comboBox_4">
+      <widget class="QComboBox" name="comboColumna3">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -791,7 +877,8 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="frame">
         <bool>true</bool>
@@ -802,7 +889,7 @@
         </property>
        </item>
       </widget>
-      <widget class="QComboBox" name="comboBox_5">
+      <widget class="QComboBox" name="comboColumna4">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -812,7 +899,8 @@
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="frame">
         <bool>true</bool>
@@ -823,17 +911,18 @@
         </property>
        </item>
       </widget>
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="btnGraficar">
        <property name="geometry">
         <rect>
-         <x>260</x>
-         <y>240</y>
+         <x>340</x>
+         <y>280</y>
          <width>131</width>
          <height>71</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
        </property>
        <property name="text">
         <string>Graficar columnas</string>
@@ -842,14 +931,15 @@
       <widget class="QComboBox" name="comboBox_3">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>340</y>
+         <x>260</x>
+         <y>240</y>
          <width>53</width>
          <height>22</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
        </property>
        <item>
         <property name="text">
@@ -860,8 +950,8 @@
       <widget class="QComboBox" name="comboBox_6">
        <property name="geometry">
         <rect>
-         <x>270</x>
-         <y>370</y>
+         <x>350</x>
+         <y>240</y>
          <width>53</width>
          <height>22</height>
         </rect>
@@ -875,23 +965,24 @@
         </property>
        </item>
       </widget>
-      <widget class="QPushButton" name="pushButton_15">
+      <widget class="QPushButton" name="btnScatter">
        <property name="geometry">
         <rect>
-         <x>340</x>
-         <y>330</y>
+         <x>220</x>
+         <y>280</y>
          <width>101</width>
          <height>71</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;</string>
+        <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
        </property>
        <property name="text">
         <string>Generar Scatter</string>
        </property>
       </widget>
-      <widget class="QTableWidget" name="tableWidget_2">
+      <widget class="QTableWidget" name="tableDatos">
        <property name="geometry">
         <rect>
          <x>20</x>

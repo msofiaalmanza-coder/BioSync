@@ -23,6 +23,9 @@
       <height>761</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(230, 230, 230);</string>
+    </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
     </property>
@@ -32,8 +35,8 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>150</y>
+       <x>90</x>
+       <y>130</y>
        <width>221</width>
        <height>121</height>
       </rect>
@@ -49,10 +52,13 @@
      <property name="geometry">
       <rect>
        <x>240</x>
-       <y>190</y>
+       <y>180</y>
        <width>171</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="echoMode">
       <enum>QLineEdit::Password</enum>
@@ -61,7 +67,7 @@
     <widget class="QLabel" name="lblusuario">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>80</x>
        <y>30</y>
        <width>221</width>
        <height>151</height>
@@ -74,7 +80,7 @@
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;Ingresa el nombre del usuario: &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="txtusuario">
+    <widget class="QLineEdit" name="txtUsuario">
      <property name="geometry">
       <rect>
        <x>240</x>
@@ -83,37 +89,44 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
     </widget>
-    <widget class="QPushButton" name="btnlogin">
+    <widget class="QPushButton" name="btnLogin">
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>240</y>
+       <y>230</y>
        <width>151</width>
        <height>51</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;</string>
+      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
      </property>
      <property name="text">
       <string>Ingresar</string>
      </property>
     </widget>
-    <widget class="QLabel" name="lblmensaje">
+    <widget class="QLabel" name="lblMensaje">
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>300</y>
+       <y>290</y>
        <width>181</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="btnVolver">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -123,10 +136,27 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;</string>
+      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
      </property>
      <property name="text">
       <string>Cancelar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblTitulo">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>20</y>
+       <width>151</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 20pt &quot;Times New Roman&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;LOGIN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
    </widget>
