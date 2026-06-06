@@ -108,7 +108,7 @@ modelo con : modelo_dicom.py, modelo_senales.py, modelo_tablas.py, modelo_db.py
 
 controlador con: controlador.py
 
-vista con : main.ui, login.ui, principal.ui, vista_login.py, vista_principal.py
+vista con : main.ui, login.ui, principal.ui, vista_main.py, vista_login.py, vista_principal.py
 
 y el archivo main.py, para ejecutar 
 
