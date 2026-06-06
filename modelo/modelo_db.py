@@ -1,56 +1,34 @@
-import mysql.connector
+import pymysql
 from datetime import datetime
 
-
 class ModeloDB:
-
     def __init__(self):
-
-        self.conexion = mysql.connector.connect(
-            host="localhost",
+        self.conn = pymysql.connect(
+            host="127.0.0.1",
             user="root",
             password="",
-            database="biosync"
+            database="biomedica_db",
+            port=3306
         )
 
-        self.cursor = self.conexion.cursor()
-
-    def validar_usuario(self, usuario, password):
-
-        consulta = """
-        SELECT id,nombre,rol
-        FROM usuarios
-        WHERE nombre=%s
-        AND password=%s
-        """
-
-        self.cursor.execute(
-            consulta,
-            (usuario, password)
+    def validar_usuario(self, usuario, contrasena):
+        cursor = self.conn.cursor()
+        cursor.execute(
+            "SELECT id, nombre, rol FROM usuarios WHERE usuario=%s AND contrasena=%s",
+            (usuario, contrasena)
         )
-
-        return self.cursor.fetchone()
+        resultado = cursor.fetchone()
+        cursor.close()
+        return resultado
 
     def guardar_sesion(self, id_usuario, ruta_foto):
-
-        consulta = """
-        INSERT INTO sesiones
-        (id_usuario,ruta_foto,fecha)
-        VALUES (%s,%s,%s)
-        """
-
-        self.cursor.execute(
-            consulta,
-            (
-                id_usuario,
-                ruta_foto,
-                datetime.now()
-            )
+        cursor = self.conn.cursor()
+        cursor.execute(
+            "INSERT INTO sesiones (id_usuario, ruta_foto, fecha) VALUES (%s, %s, %s)",
+            (id_usuario, ruta_foto, datetime.now())
         )
-
-        self.conexion.commit()
+        self.conn.commit()
+        cursor.close()
 
     def cerrar(self):
-
-        self.cursor.close()
-        self.conexion.close()
+        self.conn.close()
