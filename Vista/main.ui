@@ -51,7 +51,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="txtUsuario">
+    <widget class="QPushButton" name="btnIngresar">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -120,7 +120,7 @@ background-color: rgb(240, 240, 240);</string>
     </widget>
     <zorder>btnSalir</zorder>
     <zorder>lblSubtitulo</zorder>
-    <zorder>txtUsuario</zorder>
+    <zorder>btnIngresar</zorder>
     <zorder>lblTitulo</zorder>
     <zorder>lblLogo</zorder>
    </widget>

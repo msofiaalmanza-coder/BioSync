@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>525</width>
-    <height>579</height>
+    <height>561</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,7 +44,7 @@ background-color: rgb(230, 230, 230);
 </string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -114,7 +114,7 @@ background-color: rgb(230, 230, 230);
         <string/>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit">
+      <widget class="QLineEdit" name="txtUsuarioSesion">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -126,8 +126,11 @@ background-color: rgb(230, 230, 230);
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_2">
+      <widget class="QLineEdit" name="txtRolSesion_2">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -139,8 +142,11 @@ background-color: rgb(230, 230, 230);
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
        </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_3">
+      <widget class="QLineEdit" name="txtFechaSesion">
        <property name="geometry">
         <rect>
          <x>200</x>
@@ -151,6 +157,9 @@ background-color: rgb(230, 230, 230);
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btnCapturarFoto">
@@ -192,7 +201,7 @@ background-color: rgb(194, 225, 252);</string>
         <string>Cargar DICOM</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="btncambiarnifti">
+      <widget class="QPushButton" name="btnConvertirNifti">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -208,7 +217,7 @@ background-color: rgb(194, 225, 252);</string>
         <string>Convertir a NIFTI</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="btnGuardarExcel">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -337,7 +346,7 @@ background-color: rgb(194, 225, 252);</string>
         <string>Seleccionar Roi</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="btnGuardarRecorte">
        <property name="geometry">
         <rect>
          <x>130</x>
@@ -383,7 +392,7 @@ background-color: rgb(194, 225, 252);</string>
        <property name="geometry">
         <rect>
          <x>350</x>
-         <y>300</y>
+         <y>270</y>
          <width>101</width>
          <height>41</height>
         </rect>
@@ -399,7 +408,7 @@ background-color: rgb(194, 225, 252);</string>
        <property name="geometry">
         <rect>
          <x>340</x>
-         <y>360</y>
+         <y>340</y>
          <width>131</width>
          <height>41</height>
         </rect>
@@ -501,8 +510,8 @@ background-color: rgb(194, 225, 252);</string>
       <widget class="QComboBox" name="comboSegmentacion">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>330</y>
+         <x>380</x>
+         <y>300</y>
          <width>53</width>
          <height>22</height>
         </rect>
@@ -537,7 +546,7 @@ background-color: rgb(194, 225, 252);</string>
        <property name="geometry">
         <rect>
          <x>370</x>
-         <y>410</y>
+         <y>400</y>
          <width>53</width>
          <height>22</height>
         </rect>
@@ -657,7 +666,7 @@ background-color: rgb(194, 225, 252);</string>
         <string>Agregar Ruido</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="btnMostrarCanales">
        <property name="geometry">
         <rect>
          <x>230</x>
@@ -794,7 +803,7 @@ background-color: rgb(194, 225, 252);</string>
       <attribute name="title">
        <string>Datos tabulares</string>
       </attribute>
-      <widget class="QPushButton" name="btnCargardatos">
+      <widget class="QPushButton" name="btnCargarDatos">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -928,7 +937,7 @@ background-color: rgb(194, 225, 252);</string>
         <string>Graficar columnas</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_3">
+      <widget class="QComboBox" name="comboScatterX">
        <property name="geometry">
         <rect>
          <x>260</x>
@@ -947,7 +956,7 @@ background-color: rgb(255, 255, 255);</string>
         </property>
        </item>
       </widget>
-      <widget class="QComboBox" name="comboBox_6">
+      <widget class="QComboBox" name="comboScatterY">
        <property name="geometry">
         <rect>
          <x>350</x>
