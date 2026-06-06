@@ -8,7 +8,7 @@ from modelo.modelo_tabular import ModeloTabular
 
 class Controlador:
 
-    def _init_(self):
+    def __init__(self):
 
         self.main = uic.loadUi(
             "vista/main.ui"
