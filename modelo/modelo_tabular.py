@@ -4,7 +4,7 @@ import io
 
 class ModeloTabular:
 
-    def _init_(self):
+    def __init__(self):
         self.df = None
 
     def cargar(self, ruta):
