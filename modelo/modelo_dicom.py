@@ -7,7 +7,7 @@ import pandas as pd
 from datetime import datetime
 
 class DicomModel:
-    def _init_(self):
+    def __init__(self):
 
         self.archivos = []
         self.volumen_3d = None
