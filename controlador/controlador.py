@@ -49,3 +49,53 @@ class Controlador:
         self.login.btnVolver.clicked.connect(
             self.volver_main
         )
+    def mostrar_main(self):
+
+        self.main.show()
+
+    def abrir_login(self):
+
+        self.main.hide()
+
+        self.login.show()
+
+    def volver_main(self):
+
+        self.login.hide()
+
+        self.main.show()
+
+    def cerrar_app(self):
+
+        self.main.close()
+
+    def validar_login(self):
+
+        usuario = self.login.txtUsuario.text()
+        password = self.login.txtPassword.text()
+        resultado = self.modelo_db.validar_usuario(
+            usuario,
+            password
+        )
+
+        if resultado:
+
+            self.login.hide()
+
+            self.principal.show()
+
+            self.principal.txtUsuarioSesion.setText(
+                resultado[1]
+            )
+
+            self.principal.txtRolSesion_2.setText(
+                resultado[2]
+            )
+
+            self.login.lblMensaje.setText("")
+
+        else:
+
+            self.login.lblMensaje.setText(
+                "Usuario o contraseña incorrectos"
+            )
