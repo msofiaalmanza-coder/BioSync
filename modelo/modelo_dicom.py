@@ -14,11 +14,10 @@ class DicomModel:
         self.metadata = {}
     def cargar_dicom(self, carpeta):
         dicoms = []
-        for archivo in os.listdir(carpeta):
-
-            if archivo.lower().endswith(".dcm"):
-                ruta = os.path.join(carpeta,archivo)
-
+        for raiz, dirs, archivos in os.walk(carpeta):
+            for archivo in archivos:
+                if archivo.lower().endswith(".dcm"):
+                    ruta = os.path.join(raiz, archivo)
                 try:
                     ds = pydicom.dcmread(ruta)
                     dicoms.append(ds)
