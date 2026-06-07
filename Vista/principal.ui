@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -308,9 +308,9 @@ background-color: rgb(205, 215, 255);</string>
         <widget class="QPushButton" name="btnSegmentar">
          <property name="geometry">
           <rect>
-           <x>490</x>
+           <x>470</x>
            <y>810</y>
-           <width>161</width>
+           <width>191</width>
            <height>41</height>
           </rect>
          </property>
@@ -343,7 +343,7 @@ background-color: rgb(205, 215, 255);</string>
          <property name="geometry">
           <rect>
            <x>710</x>
-           <y>540</y>
+           <y>530</y>
            <width>91</width>
            <height>21</height>
           </rect>
