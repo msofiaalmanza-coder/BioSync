@@ -35,13 +35,13 @@
          <x>20</x>
          <y>10</y>
          <width>760</width>
-         <height>583</height>
+         <height>800</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
          <width>760</width>
-         <height>583</height>
+         <height>800</height>
         </size>
        </property>
        <property name="styleSheet">
@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -662,7 +662,7 @@ background-color: rgb(255, 255, 255);</string>
           <string/>
          </property>
         </widget>
-        <widget class="QLabel" name="lblImagensegmentada">
+        <widget class="QLabel" name="lblImagenSegmentada">
          <property name="geometry">
           <rect>
            <x>40</x>
