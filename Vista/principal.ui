@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -130,7 +130,8 @@ background-color: rgb(230, 230, 230);
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;Times New Roman&quot;;</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -146,7 +147,8 @@ background-color: rgb(230, 230, 230);
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;Times New Roman&quot;;</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -162,7 +164,8 @@ background-color: rgb(230, 230, 230);
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">background-color: rgb(255, 255, 255);
+font: 10pt &quot;Times New Roman&quot;;</string>
          </property>
          <property name="readOnly">
           <bool>true</bool>
@@ -201,7 +204,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Cargar DICOM</string>
@@ -217,7 +221,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Convertir a NIFTI</string>
@@ -232,6 +237,9 @@ background-color: rgb(194, 225, 252);</string>
            <height>191</height>
           </rect>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
         </widget>
         <widget class="QPushButton" name="btnZoom">
          <property name="geometry">
@@ -243,7 +251,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Generar Zoom</string>
@@ -259,7 +268,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Guardar recorte</string>
@@ -317,7 +327,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Aplicar segmentación</string>
@@ -365,7 +376,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Aplicar morfología </string>
@@ -391,7 +403,8 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+          <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(194, 225, 252);</string>
          </property>
          <property name="text">
           <string>Guardar CSV</string>
@@ -405,6 +418,9 @@ background-color: rgb(194, 225, 252);</string>
            <width>101</width>
            <height>41</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <item>
           <property name="text">
@@ -440,6 +456,9 @@ background-color: rgb(194, 225, 252);</string>
            <width>111</width>
            <height>41</height>
           </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
          <item>
           <property name="text">
@@ -492,7 +511,8 @@ background-color: rgb(194, 225, 252);</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
@@ -556,7 +576,8 @@ background-color: rgb(194, 225, 252);</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
@@ -591,7 +612,8 @@ background-color: rgb(194, 225, 252);</string>
            </rect>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;</string>
+           <string notr="true">font: 75 8pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::Box</enum>
@@ -880,7 +902,7 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+          <string notr="true">font: 75 10pt &quot;Times New Roman&quot;;
 background-color: rgb(255, 255, 255);</string>
          </property>
          <item>
@@ -958,7 +980,7 @@ background-color: rgb(194, 225, 252);</string>
           </rect>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 75 11pt &quot;Times New Roman&quot;;
+          <string notr="true">font: 75 10pt &quot;Times New Roman&quot;;
 background-color: rgb(255, 255, 255);</string>
          </property>
          <item>
@@ -981,6 +1003,23 @@ background-color: rgb(255, 255, 255);</string>
            <string>columna 4</string>
           </property>
          </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>500</y>
+           <width>131</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;Times New Roman&quot;;
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>SALIR</string>
+         </property>
         </widget>
        </widget>
       </widget>
