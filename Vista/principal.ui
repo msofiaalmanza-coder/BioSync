@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>770</width>
-    <height>645</height>
+    <width>800</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>770</width>
-    <height>583</height>
+    <width>800</width>
+    <height>1000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -1094,7 +1094,7 @@ background-color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>770</width>
+     <width>800</width>
      <height>18</height>
     </rect>
    </property>
