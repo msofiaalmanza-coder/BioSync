@@ -1,12 +1,19 @@
 import sys
+
 from PyQt5.QtWidgets import QApplication
-from PyQt5 import uic
+from controlador.controlador import Controlador
 
-app = QApplication(sys.argv)
 
-try:
-    ventana = uic.loadUi("Vista/main.ui")
-    ventana.show()
-    app.exec_()
-except Exception as e:
-    print("Error:", e)
+def main():
+
+    app = QApplication(sys.argv)
+
+    controlador = Controlador()
+
+    controlador.mostrar_main()
+
+    sys.exit(app.exec_())
+
+
+if __name__ == "__main__":
+    main()
