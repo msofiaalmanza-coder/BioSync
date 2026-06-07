@@ -126,12 +126,10 @@ class PrincipalView(QMainWindow):
         self.btnGuardarCSV.setGeometry(10, 100, 131, 31)
         self.btnGuardarCSV.setStyleSheet(BTN_STYLE)
 
-        # Tabla de metadatos DICOM
         self.tableMetadatos = QTableWidget(tab)
         self.tableMetadatos.setGeometry(170, 10, 491, 191)
         self.tableMetadatos.setStyleSheet("background-color: rgb(255, 255, 255);")
 
-        # Tipo de segmentación
         self.label_tipo_seg = QLabel(tab)
         self.label_tipo_seg.setGeometry(10, 140, 141, 41)
         self.label_tipo_seg.setStyleSheet('font: 75 11pt "Times New Roman";')
@@ -151,7 +149,6 @@ class PrincipalView(QMainWindow):
         self.btnSegmentar.setGeometry(10, 240, 161, 41)
         self.btnSegmentar.setStyleSheet(BTN_STYLE)
 
-        # Vistas axial / coronal / sagital
         self.frame_vistas = QFrame(tab)
         self.frame_vistas.setGeometry(270, 210, 311, 181)
         self.frame_vistas.setFrameShape(QFrame.StyledPanel)
@@ -237,7 +234,6 @@ class PrincipalView(QMainWindow):
         self.btnCargarMat.setGeometry(30, 90, 131, 101)
         self.btnCargarMat.setStyleSheet(BTN_STYLE_LG)
 
-        # Canal inicial
         self.label_canal_ini = QLabel(tab)
         self.label_canal_ini.setGeometry(220, 20, 111, 51)
         self.label_canal_ini.setStyleSheet('font: 11pt "Times New Roman";')
@@ -249,7 +245,6 @@ class PrincipalView(QMainWindow):
         self.spinCanalInicial.setGeometry(260, 70, 42, 22)
         self.spinCanalInicial.setStyleSheet("background-color: rgb(255, 255, 255);")
 
-        # Canal final
         self.label_canal_fin = QLabel(tab)
         self.label_canal_fin.setGeometry(340, 20, 91, 51)
         self.label_canal_fin.setStyleSheet('font: 75 11pt "Times New Roman";')
@@ -269,7 +264,6 @@ class PrincipalView(QMainWindow):
         self.btnAgregarRuido.setGeometry(360, 110, 131, 61)
         self.btnAgregarRuido.setStyleSheet(BTN_STYLE_SM)
 
-        # Eje de análisis
         self.label_eje = QLabel(tab)
         self.label_eje.setGeometry(490, 50, 181, 16)
         self.label_eje.setStyleSheet('font: 75 8pt "Times New Roman";')
@@ -375,7 +369,6 @@ class PrincipalView(QMainWindow):
             pixmap.scaled(self.lblFotoUsuario.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
         )
 
-    # -- Tab Imágenes médicas --
 
     def set_imagen_axial(self, pixmap: QPixmap):
         self.lblAxial.setPixmap(
@@ -429,7 +422,6 @@ class PrincipalView(QMainWindow):
     def get_slice_sagital(self) -> int:
         return self.sliderSagital.value()
 
-    # -- Tab Señales biomédicas --
 
     def get_canal_inicial(self) -> int:
         return self.spinCanalInicial.value()
