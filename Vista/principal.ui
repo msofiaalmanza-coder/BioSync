@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -939,9 +939,9 @@ font: 10pt &quot;Times New Roman&quot;;</string>
         <widget class="QLabel" name="label_2">
          <property name="geometry">
           <rect>
-           <x>70</x>
+           <x>50</x>
            <y>200</y>
-           <width>141</width>
+           <width>161</width>
            <height>51</height>
           </rect>
          </property>
@@ -995,8 +995,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QComboBox" name="comboColumna1">
          <property name="geometry">
           <rect>
-           <x>240</x>
-           <y>470</y>
+           <x>30</x>
+           <y>480</y>
            <width>191</width>
            <height>41</height>
           </rect>
@@ -1030,7 +1030,7 @@ background-color: rgb(255, 255, 255);</string>
          <property name="geometry">
           <rect>
            <x>160</x>
-           <y>520</y>
+           <y>540</y>
            <width>131</width>
            <height>61</height>
           </rect>
@@ -1073,8 +1073,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QComboBox" name="comboColumna1_2">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>470</y>
+           <x>240</x>
+           <y>480</y>
            <width>191</width>
            <height>41</height>
           </rect>
@@ -1125,7 +1125,7 @@ background-color: rgb(255, 255, 255);</string>
          <property name="geometry">
           <rect>
            <x>490</x>
-           <y>510</y>
+           <y>550</y>
            <width>441</width>
            <height>301</height>
           </rect>
@@ -1138,7 +1138,7 @@ background-color: rgb(255, 255, 255);</string>
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>600</y>
+           <y>640</y>
            <width>431</width>
            <height>291</height>
           </rect>
@@ -1160,7 +1160,7 @@ background-color: rgb(255, 255, 255);</string>
           <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;</string>
          </property>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Selecciona las columnas a graficar:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Columnas a graficar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </widget>
