@@ -39,12 +39,14 @@ class Controlador:
         self.id_usuario_actual = None
 
         self.conectar_eventos()
+        print("cargado")
 
     # =====================================
     # EVENTOS
     # =====================================
 
     def conectar_eventos(self):
+        print("entre")
 
         self.main.btnIngresar.clicked.connect(
             self.abrir_login
@@ -77,6 +79,21 @@ class Controlador:
         self.principal.btnGuardarCSV.clicked.connect(
             self.guardar_csv
         )
+        self.principal.btnCapturarFoto.clicked.connect(
+            lambda: print("Foto")
+        )
+
+        self.principal.btnCargarDicom.clicked.connect(
+            lambda: print("DICOM")
+        )
+
+        self.principal.btnConvertirNifti.clicked.connect(
+            lambda: print("NIFTI")
+        )
+
+        self.principal.btnGuardarCSV.clicked.connect(
+            lambda: print("CSV")
+        )
 
     # =====================================
     # NAVEGACION
@@ -99,7 +116,7 @@ class Controlador:
     def cerrar_app(self):
 
         self.main.close()
-
+    print("Conectando")
     # =====================================
     # LOGIN
     # =====================================
