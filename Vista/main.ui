@@ -6,131 +6,127 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>670</height>
+    <width>785</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame1">
-    <property name="geometry">
-     <rect>
-      <x>-110</x>
-      <y>0</y>
-      <width>731</width>
-      <height>681</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(85, 170, 255);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="lblLogo">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>20</y>
-       <width>191</width>
-       <height>171</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>logogood.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnIngresar">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>400</y>
-       <width>171</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame1">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="lblLogo">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>20</y>
+         <width>191</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>logogood.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnIngresar">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>400</y>
+         <width>171</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
 border-color: rgb(0, 0, 0);
 background-color: rgb(240, 240, 240);</string>
-     </property>
-     <property name="text">
-      <string>Entrar</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnSalir">
-     <property name="geometry">
-      <rect>
-       <x>340</x>
-       <y>490</y>
-       <width>171</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
+       </property>
+       <property name="text">
+        <string>Entrar</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnSalir">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>490</y>
+         <width>171</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Times New Roman&quot;;
 background-color: rgb(240, 240, 240);</string>
-     </property>
-     <property name="text">
-      <string>Salir</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblSubtitulo">
-     <property name="geometry">
-      <rect>
-       <x>160</x>
-       <y>210</y>
-       <width>541</width>
-       <height>211</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: italic 10pt &quot;Times New Roman&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Bienvenido al sistema de análisis biomédico&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblTitulo">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>210</y>
-       <width>361</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 75 20pt &quot;Times New Roman&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;BioSync&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <zorder>btnSalir</zorder>
-    <zorder>lblSubtitulo</zorder>
-    <zorder>btnIngresar</zorder>
-    <zorder>lblTitulo</zorder>
-    <zorder>lblLogo</zorder>
-   </widget>
+       </property>
+       <property name="text">
+        <string>Salir</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblSubtitulo">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>210</y>
+         <width>541</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: italic 10pt &quot;Times New Roman&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Bienvenido al sistema de análisis biomédico&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblTitulo">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>210</y>
+         <width>381</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 20pt &quot;Times New Roman&quot;;</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:26pt; font-weight:600;&quot;&gt;BioSync&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <zorder>btnSalir</zorder>
+      <zorder>lblSubtitulo</zorder>
+      <zorder>btnIngresar</zorder>
+      <zorder>lblTitulo</zorder>
+      <zorder>lblLogo</zorder>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>615</width>
+     <width>785</width>
      <height>18</height>
     </rect>
    </property>
