@@ -370,17 +370,17 @@ class Controlador:
             self.principal.comboColumna1_2.clear()
             self.principal.comboColumna1_2.addItems(columnas)
 
-            # mostrar describe en tablaDatos
+        
             df = self.modelo_tabular.get_dataframe()
             describe = df.describe().reset_index()
-            self.principal.tablaDatos.setRowCount(len(describe))
-            self.principal.tablaDatos.setColumnCount(len(describe.columns))
-            self.principal.tablaDatos.setHorizontalHeaderLabels(list(describe.columns.astype(str)))
+            self.principal.tableDatos.setRowCount(len(describe))
+            self.principal.tableDatos.setColumnCount(len(describe.columns))
+            self.principal.tableDatos.setHorizontalHeaderLabels(list(describe.columns.astype(str)))
             for i in range(len(describe)):
                 for j in range(len(describe.columns)):
                     val = describe.iloc[i, j]
                     texto = f"{val:.4f}" if isinstance(val, float) else str(val)
-                    self.principal.tablaDatos.setItem(i, j, QTableWidgetItem(texto))
+                    self.principal.tableDatos.setItem(i, j, QTableWidgetItem(texto))
 
         except Exception as e:
             QMessageBox.critical(self.principal, "Error", str(e))
