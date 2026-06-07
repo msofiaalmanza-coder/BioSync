@@ -236,9 +236,9 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnZoom">
          <property name="geometry">
           <rect>
-           <x>30</x>
+           <x>10</x>
            <y>450</y>
-           <width>81</width>
+           <width>111</width>
            <height>51</height>
           </rect>
          </property>
@@ -254,7 +254,7 @@ background-color: rgb(194, 225, 252);</string>
           <rect>
            <x>130</x>
            <y>450</y>
-           <width>81</width>
+           <width>121</width>
            <height>51</height>
           </rect>
          </property>
@@ -294,9 +294,9 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="label_10">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>140</y>
-           <width>101</width>
+           <width>141</width>
            <height>41</height>
           </rect>
          </property>
@@ -310,9 +310,9 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnSegmentar">
          <property name="geometry">
           <rect>
-           <x>20</x>
+           <x>10</x>
            <y>240</y>
-           <width>111</width>
+           <width>161</width>
            <height>41</height>
           </rect>
          </property>
