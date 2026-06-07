@@ -18,13 +18,12 @@ class DicomModel:
             for archivo in archivos:
                 if archivo.lower().endswith(".dcm"):
                     ruta = os.path.join(raiz, archivo)
-                try:
-                    ds = pydicom.dcmread(ruta)
-                    dicoms.append(ds)
+                    try:
+                        ds = pydicom.dcmread(ruta)
+                        dicoms.append(ds)
 
-                except Exception as e:
-
-                    print(f"Error leyendo {archivo}: {e}")
+                    except Exception as e:
+                        print(f"Error leyendo {archivo}: {e}")
         if len(dicoms) == 0:
             raise ValueError("No se encontraron archivos DICOM.")
 
