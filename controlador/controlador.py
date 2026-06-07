@@ -305,9 +305,18 @@ class Controlador:
             return
         canal_ini = self.principal.spinCanalInicial.value()
         canal_fin = self.principal.spinCanalFinal.value()
+        
+        if canal_fin < canal_ini:
+            QMessageBox.warning(self.principal, "Señales", "Canal final debe ser mayor al inicial")
+            return
+        
         canales = self.modelo_senales.seleccionar_canales(canal_ini, canal_fin)
-
         n = canales.shape[0]
+        
+        if n == 0:
+            QMessageBox.warning(self.principal, "Señales", "No hay canales en ese rango")
+            return
+
         fig, axes = plt.subplots(n, 1, figsize=(6, max(3, n * 1.5)))
         if n == 1:
             axes = [axes]
