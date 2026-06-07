@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -311,7 +311,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>230</y>
+           <y>240</y>
            <width>111</width>
            <height>41</height>
           </rect>
@@ -359,7 +359,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>440</x>
-           <y>500</y>
+           <y>510</y>
            <width>181</width>
            <height>31</height>
           </rect>
@@ -400,10 +400,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QComboBox" name="comboSegmentacion">
          <property name="geometry">
           <rect>
-           <x>40</x>
+           <x>20</x>
            <y>190</y>
-           <width>53</width>
-           <height>22</height>
+           <width>101</width>
+           <height>41</height>
           </rect>
          </property>
          <item>
@@ -435,10 +435,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QComboBox" name="comboMorfologia">
          <property name="geometry">
           <rect>
-           <x>560</x>
-           <y>470</y>
-           <width>53</width>
-           <height>22</height>
+           <x>530</x>
+           <y>451</y>
+           <width>111</width>
+           <height>41</height>
           </rect>
          </property>
          <item>
