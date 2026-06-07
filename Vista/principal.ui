@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -107,10 +107,10 @@ background-color: rgb(230, 230, 230);
         <widget class="QLabel" name="lblFotoUsuario">
          <property name="geometry">
           <rect>
-           <x>310</x>
-           <y>230</y>
-           <width>141</width>
-           <height>151</height>
+           <x>300</x>
+           <y>220</y>
+           <width>161</width>
+           <height>181</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -175,7 +175,7 @@ font: 10pt &quot;Times New Roman&quot;;</string>
          <property name="geometry">
           <rect>
            <x>280</x>
-           <y>400</y>
+           <y>430</y>
            <width>201</width>
            <height>81</height>
           </rect>
