@@ -183,13 +183,17 @@ class Controlador:
         if self.modelo_dicom.volumen_3d is None:
             return
         corte = self.modelo_dicom.corte_coronal(indice)
-        self.mostrar_imagen(self.modelo_dicom.normalizar(corte), self.principal.lblCoronal_2)
+        norm = self.modelo_dicom.normalizar(corte)
+        norm = np.rot90(norm)
+        self.mostrar_imagen(norm, self.principal.lblCoronal_2)
 
     def actualizar_sagital(self, indice):
         if self.modelo_dicom.volumen_3d is None:
             return
         corte = self.modelo_dicom.corte_sagital(indice)
-        self.mostrar_imagen(self.modelo_dicom.normalizar(corte), self.principal.lblSagital_2)
+        norm = self.modelo_dicom.normalizar(corte)
+        norm = np.rot90(norm)
+        self.mostrar_imagen(norm, self.principal.lblSagital_2)
 
     def convertir_nifti(self):
         if self.modelo_dicom.volumen_3d is None:
