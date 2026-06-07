@@ -16,7 +16,7 @@ class DicomModel:
         dicoms = []
         for raiz, dirs, archivos in os.walk(carpeta):
             for archivo in archivos:
-                if archivo.endswith(".DCM"):
+                if archivo.lower().endswith(".dcm"):
                     ruta = os.path.join(raiz, archivo)
                     try:
                         ds = pydicom.dcmread(ruta)
