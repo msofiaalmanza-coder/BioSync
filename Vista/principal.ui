@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -686,7 +686,7 @@ background-color: rgb(255, 255, 255);</string>
            <x>30</x>
            <y>90</y>
            <width>131</width>
-           <height>101</height>
+           <height>91</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -758,7 +758,7 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnAgregarRuido">
          <property name="geometry">
           <rect>
-           <x>270</x>
+           <x>290</x>
            <y>220</y>
            <width>131</width>
            <height>61</height>
@@ -870,10 +870,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="lblGraficaDesviacion">
          <property name="geometry">
           <rect>
-           <x>40</x>
-           <y>320</y>
-           <width>211</width>
-           <height>141</height>
+           <x>10</x>
+           <y>220</y>
+           <width>261</width>
+           <height>251</height>
           </rect>
          </property>
          <property name="text">

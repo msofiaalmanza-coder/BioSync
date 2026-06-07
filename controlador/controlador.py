@@ -356,10 +356,13 @@ class Controlador:
 
         promedio, desviacion = self.modelo_senales.estadisticas(eje)
 
+        prom = np.atleast_1d(promedio).flatten()
+        desv = np.atleast_1d(desviacion).flatten()
+
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 3))
-        ax1.stem(np.atleast_1d(promedio))
+        ax1.stem(range(len(prom)), prom)
         ax1.set_title(f"Promedio (eje {eje})")
-        ax2.stem(np.atleast_1d(desviacion))
+        ax2.stem(range(len(desv)), desv)
         ax2.set_title(f"Desviación estándar (eje {eje})")
         fig.tight_layout()
         self._fig_a_label(fig, self.principal.lblGraficarPromedio)
