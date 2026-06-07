@@ -140,6 +140,7 @@ class Controlador:
 
     def cargar_dicom(self):
         carpeta = QFileDialog.getExistingDirectory(self.principal, "Seleccionar carpeta DICOM")
+        print(f"Carpeta seleccionada: '{carpeta}'")
         if not carpeta:
             return
         try:
@@ -168,7 +169,8 @@ class Controlador:
             self.principal.sliderSagital.setValue(dims[2] // 2)
 
         except Exception as e:
-            QMessageBox.critical(self.principal, "Error DICOM", str(e))
+                print(f"ERROR DICOM: {e}")
+                QMessageBox.critical(self.principal, "Error DICOM", str(e))
 
     def actualizar_axial(self, indice):
         if self.modelo_dicom.volumen_3d is None:
