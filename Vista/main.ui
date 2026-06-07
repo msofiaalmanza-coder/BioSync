@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>785</width>
-    <height>630</height>
+    <width>1124</width>
+    <height>1082</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>770</width>
-    <height>583</height>
+    <width>1000</width>
+    <height>1000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -35,10 +35,10 @@
       <widget class="QLabel" name="lblLogo">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>20</y>
-         <width>191</width>
-         <height>171</height>
+         <x>440</x>
+         <y>160</y>
+         <width>251</width>
+         <height>231</height>
         </rect>
        </property>
        <property name="text">
@@ -54,8 +54,8 @@
       <widget class="QPushButton" name="btnIngresar">
        <property name="geometry">
         <rect>
-         <x>310</x>
-         <y>360</y>
+         <x>490</x>
+         <y>560</y>
          <width>171</width>
          <height>81</height>
         </rect>
@@ -72,8 +72,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QPushButton" name="btnSalir">
        <property name="geometry">
         <rect>
-         <x>310</x>
-         <y>470</y>
+         <x>490</x>
+         <y>670</y>
          <width>171</width>
          <height>81</height>
         </rect>
@@ -89,8 +89,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QLabel" name="lblSubtitulo">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>190</y>
+         <x>200</x>
+         <y>390</y>
          <width>770</width>
          <height>211</height>
         </rect>
@@ -111,8 +111,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QLabel" name="lblTitulo">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>190</y>
+         <x>380</x>
+         <y>390</y>
          <width>381</width>
          <height>81</height>
         </rect>
@@ -138,7 +138,7 @@ background-color: rgb(240, 240, 240);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>785</width>
+     <width>1124</width>
      <height>18</height>
     </rect>
    </property>

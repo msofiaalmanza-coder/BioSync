@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>782</width>
-    <height>631</height>
+    <width>1245</width>
+    <height>1000</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>770</width>
-    <height>583</height>
+    <width>1000</width>
+    <height>1000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -41,8 +41,8 @@
       <widget class="QLabel" name="label">
        <property name="geometry">
         <rect>
-         <x>220</x>
-         <y>140</y>
+         <x>260</x>
+         <y>310</y>
          <width>521</width>
          <height>141</height>
         </rect>
@@ -57,15 +57,15 @@
       <widget class="QLineEdit" name="txtPassword">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>190</y>
-         <width>171</width>
-         <height>41</height>
+         <x>560</x>
+         <y>360</y>
+         <width>211</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;Times New Roman&quot;;</string>
+font: 11pt &quot;Times New Roman&quot;;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -74,8 +74,8 @@ font: 10pt &quot;Times New Roman&quot;;</string>
       <widget class="QLabel" name="lblusuario">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>30</y>
+         <x>260</x>
+         <y>200</y>
          <width>431</width>
          <height>151</height>
         </rect>
@@ -90,22 +90,22 @@ font: 10pt &quot;Times New Roman&quot;;</string>
       <widget class="QLineEdit" name="txtUsuario">
        <property name="geometry">
         <rect>
-         <x>430</x>
-         <y>90</y>
-         <width>171</width>
-         <height>31</height>
+         <x>560</x>
+         <y>260</y>
+         <width>211</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-font: 10pt &quot;Times New Roman&quot;;</string>
+font: 11pt &quot;Times New Roman&quot;;</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btnLogin">
        <property name="geometry">
         <rect>
-         <x>300</x>
-         <y>290</y>
+         <x>430</x>
+         <y>460</y>
          <width>151</width>
          <height>51</height>
         </rect>
@@ -121,24 +121,25 @@ background-color: rgb(194, 225, 252);</string>
       <widget class="QLabel" name="lblMensaje">
        <property name="geometry">
         <rect>
-         <x>200</x>
-         <y>350</y>
+         <x>330</x>
+         <y>520</y>
          <width>361</width>
          <height>31</height>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(230, 230, 230);</string>
+        <string notr="true">background-color: rgb(230, 230, 230);
+font: 9pt &quot;Times New Roman&quot;;</string>
        </property>
        <property name="text">
-        <string/>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btnVolver">
        <property name="geometry">
         <rect>
-         <x>300</x>
-         <y>390</y>
+         <x>430</x>
+         <y>560</y>
          <width>151</width>
          <height>51</height>
         </rect>
@@ -154,8 +155,8 @@ background-color: rgb(194, 225, 252);</string>
       <widget class="QLabel" name="lblTitulo">
        <property name="geometry">
         <rect>
-         <x>290</x>
-         <y>20</y>
+         <x>420</x>
+         <y>190</y>
          <width>151</width>
          <height>61</height>
         </rect>
@@ -176,7 +177,7 @@ background-color: rgb(194, 225, 252);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>782</width>
+     <width>1245</width>
      <height>18</height>
     </rect>
    </property>
