@@ -1029,9 +1029,9 @@ background-color: rgb(255, 255, 255);</string>
         <widget class="QPushButton" name="btnGraficar">
          <property name="geometry">
           <rect>
-           <x>160</x>
+           <x>140</x>
            <y>540</y>
-           <width>131</width>
+           <width>161</width>
            <height>61</height>
           </rect>
          </property>
@@ -1046,9 +1046,9 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnScatter">
          <property name="geometry">
           <rect>
-           <x>640</x>
+           <x>620</x>
            <y>430</y>
-           <width>131</width>
+           <width>161</width>
            <height>61</height>
           </rect>
          </property>
