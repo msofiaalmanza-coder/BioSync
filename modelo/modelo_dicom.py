@@ -12,6 +12,40 @@ class DicomModel:
         self.archivos = []
         self.volumen_3d = None
         self.metadata = {}
+
+    
+    def ordenar_dicoms(self, dicoms):
+        opciones = []
+        try:
+            opciones.append(sorted(dicoms,key=lambda x: float(x.ImagePositionPatient[2])))
+        except:
+            pass
+        try:
+            opciones.append(sorted(dicoms,key=lambda x: float(x.ImagePositionPatient[2]),reverse=True))
+        except:
+            pass
+        try:
+            opciones.append(sorted(dicoms,key=lambda x: int(getattr(x, "InstanceNumber", 0))))
+        except:
+            pass
+        try:
+            opciones.append(sorted(dicoms,key=lambda x: int(getattr(x, "InstanceNumber", 0)),reverse=True))
+        except:
+            pass
+        mejor_lista = None
+        mejor_score = float("inf")
+        for lista in opciones:
+    
+            try:
+                z = [float(ds.ImagePositionPatient[2])for ds in lista]
+                score = np.std(np.diff(z))
+                if score < mejor_score:
+                    mejor_score = score
+                    mejor_lista = lista
+            except:
+                pass
+        return mejor_lista
+
     def cargar_dicom(self, carpeta):
         dicoms = []
         for raiz, dirs, archivos in os.walk(carpeta):
@@ -27,13 +61,7 @@ class DicomModel:
         if len(dicoms) == 0:
             raise ValueError("No se encontraron archivos DICOM.")
 
-        try:
-            dicoms.sort(
-                key=lambda x:float(x.ImagePositionPatient[2]))
-        except Exception:
-            dicoms.sort(
-                key=lambda x:
-                getattr(x,"InstanceNumber",0))
+        dicoms = self.ordenar_dicoms(dicoms)
 
         self.archivos = dicoms
         self.volumen_3d = np.stack([d.pixel_array for d in dicoms])
