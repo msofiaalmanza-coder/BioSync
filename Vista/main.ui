@@ -10,6 +10,12 @@
     <height>630</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>760</width>
+    <height>583</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -29,7 +35,7 @@
       <widget class="QLabel" name="lblLogo">
        <property name="geometry">
         <rect>
-         <x>320</x>
+         <x>280</x>
          <y>20</y>
          <width>191</width>
          <height>171</height>
@@ -48,8 +54,8 @@
       <widget class="QPushButton" name="btnIngresar">
        <property name="geometry">
         <rect>
-         <x>340</x>
-         <y>400</y>
+         <x>300</x>
+         <y>360</y>
          <width>171</width>
          <height>81</height>
         </rect>
@@ -66,8 +72,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QPushButton" name="btnSalir">
        <property name="geometry">
         <rect>
-         <x>340</x>
-         <y>490</y>
+         <x>300</x>
+         <y>470</y>
          <width>171</width>
          <height>81</height>
         </rect>
@@ -83,8 +89,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QLabel" name="lblSubtitulo">
        <property name="geometry">
         <rect>
-         <x>120</x>
-         <y>210</y>
+         <x>100</x>
+         <y>190</y>
          <width>541</width>
          <height>211</height>
         </rect>
@@ -99,8 +105,8 @@ background-color: rgb(240, 240, 240);</string>
       <widget class="QLabel" name="lblTitulo">
        <property name="geometry">
         <rect>
-         <x>220</x>
-         <y>210</y>
+         <x>180</x>
+         <y>190</y>
          <width>381</width>
          <height>81</height>
         </rect>

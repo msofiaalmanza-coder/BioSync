@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>758</width>
-    <height>561</height>
+    <height>645</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,9 +28,15 @@
         <rect>
          <x>20</x>
          <y>10</y>
-         <width>511</width>
-         <height>391</height>
+         <width>760</width>
+         <height>583</height>
         </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>760</width>
+         <height>583</height>
+        </size>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(230, 230, 230);
@@ -214,10 +220,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QTableWidget" name="tableMetadatos">
          <property name="geometry">
           <rect>
-           <x>190</x>
+           <x>170</x>
            <y>10</y>
-           <width>301</width>
-           <height>121</height>
+           <width>491</width>
+           <height>191</height>
           </rect>
          </property>
         </widget>
@@ -298,7 +304,7 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnSegmentar">
          <property name="geometry">
           <rect>
-           <x>10</x>
+           <x>20</x>
            <y>230</y>
            <width>111</width>
            <height>41</height>
@@ -314,10 +320,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="label_11">
          <property name="geometry">
           <rect>
-           <x>240</x>
-           <y>320</y>
+           <x>420</x>
+           <y>400</y>
            <width>221</width>
-           <height>51</height>
+           <height>41</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -330,8 +336,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="label_12">
          <property name="geometry">
           <rect>
-           <x>240</x>
-           <y>380</y>
+           <x>430</x>
+           <y>450</y>
            <width>91</width>
            <height>21</height>
           </rect>
@@ -346,10 +352,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnMorfologia">
          <property name="geometry">
           <rect>
-           <x>280</x>
-           <y>440</y>
-           <width>131</width>
-           <height>51</height>
+           <x>440</x>
+           <y>500</y>
+           <width>181</width>
+           <height>31</height>
           </rect>
          </property>
          <property name="styleSheet">
@@ -362,8 +368,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QSpinBox" name="spinKernel">
          <property name="geometry">
           <rect>
-           <x>270</x>
-           <y>400</y>
+           <x>460</x>
+           <y>470</y>
            <width>42</width>
            <height>22</height>
           </rect>
@@ -423,8 +429,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QComboBox" name="comboMorfologia">
          <property name="geometry">
           <rect>
-           <x>370</x>
-           <y>400</y>
+           <x>560</x>
+           <y>470</y>
            <width>53</width>
            <height>22</height>
           </rect>
@@ -458,8 +464,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QFrame" name="frame_2">
          <property name="geometry">
           <rect>
-           <x>160</x>
-           <y>140</y>
+           <x>270</x>
+           <y>210</y>
            <width>311</width>
            <height>181</height>
           </rect>
