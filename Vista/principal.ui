@@ -50,7 +50,7 @@ background-color: rgb(230, 230, 230);
 </string>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -198,7 +198,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>20</y>
+           <y>10</y>
            <width>131</width>
            <height>31</height>
           </rect>
@@ -215,7 +215,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>60</y>
+           <y>50</y>
            <width>131</width>
            <height>31</height>
           </rect>
@@ -244,8 +244,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnZoom">
          <property name="geometry">
           <rect>
-           <x>10</x>
-           <y>450</y>
+           <x>20</x>
+           <y>490</y>
            <width>111</width>
            <height>51</height>
           </rect>
@@ -261,8 +261,8 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QPushButton" name="btnGuardarRecorte">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>450</y>
+           <x>140</x>
+           <y>490</y>
            <width>121</width>
            <height>51</height>
           </rect>
@@ -278,10 +278,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="lblImagenOriginal">
          <property name="geometry">
           <rect>
-           <x>20</x>
-           <y>320</y>
+           <x>30</x>
+           <y>390</y>
            <width>81</width>
-           <height>111</height>
+           <height>81</height>
           </rect>
          </property>
          <property name="text">
@@ -291,10 +291,10 @@ background-color: rgb(194, 225, 252);</string>
         <widget class="QLabel" name="lblImagenRecortada">
          <property name="geometry">
           <rect>
-           <x>130</x>
-           <y>319</y>
+           <x>160</x>
+           <y>389</y>
            <width>81</width>
-           <height>111</height>
+           <height>81</height>
           </rect>
          </property>
          <property name="text">
@@ -305,7 +305,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>140</y>
+           <y>120</y>
            <width>141</width>
            <height>41</height>
           </rect>
@@ -321,7 +321,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>240</y>
+           <y>340</y>
            <width>161</width>
            <height>41</height>
           </rect>
@@ -397,7 +397,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>100</y>
+           <y>90</y>
            <width>131</width>
            <height>31</height>
           </rect>
@@ -414,7 +414,7 @@ background-color: rgb(194, 225, 252);</string>
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>190</y>
+           <y>170</y>
            <width>101</width>
            <height>41</height>
           </rect>
@@ -648,6 +648,32 @@ background-color: rgb(255, 255, 255);</string>
            <enum>Qt::Horizontal</enum>
           </property>
          </widget>
+        </widget>
+        <widget class="QLabel" name="lblImagenMorfologica">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>410</y>
+           <width>91</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="lblImagensegmentada">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>220</y>
+           <width>91</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
         </widget>
        </widget>
        <widget class="QWidget" name="tab_2">
