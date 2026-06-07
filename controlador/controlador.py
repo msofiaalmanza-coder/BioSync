@@ -1,203 +1,167 @@
-from Vista.vista_bienvenida import VistaBienvenida
-from Vista.vista_login import VistaLogin
-from Vista.vista_principal import VistaPrincipal
+from PyQt5 import uic
+from PyQt5.QtWidgets import (
+QMessageBox,
+QFileDialog,
+QTableWidgetItem
+)
+from PyQt5.QtGui import QPixmap
 
+import cv2
+import os
+from datetime import datetime
+
+from modelo.modelo_db import ModeloDB
+from modelo.modelo_dicom import DicomModel
+from modelo.modelo_señales import SenalesModel
+from modelo.modelo_tabular import ModeloTabular
 
 class Controlador:
 
     def __init__(self):
 
-        self.vista_bienvenida = VistaBienvenida()
-        self.vista_login = VistaLogin()
-        self.vista_principal = VistaPrincipal()
+        self.main = uic.loadUi(
+            "vista/main.ui"
+        )
+
+        self.login = uic.loadUi(
+            "vista/login.ui"
+        )
+
+        self.principal = uic.loadUi(
+            "vista/principal.ui"
+        )
+
+        self.modelo_db = ModeloDB()
+        self.modelo_dicom = DicomModel()
+        self.modelo_senales = SenalesModel()
+        self.modelo_tabular = ModeloTabular()
+
+        self.id_usuario_actual = None
 
         self.conectar_eventos()
 
+    # =====================================
+    # EVENTOS
+    # =====================================
+
     def conectar_eventos(self):
 
-        # =========================
-        # BIENVENIDA
-        # =========================
-
-        self.vista_bienvenida.btnIngresar.clicked.connect(
+        self.main.btnIngresar.clicked.connect(
             self.abrir_login
         )
 
-        self.vista_bienvenida.btnSalir.clicked.connect(
-            self.salir
+        self.main.btnSalir.clicked.connect(
+            self.cerrar_app
         )
 
-        # =========================
-        # LOGIN
-        # =========================
-
-        self.vista_login.btnLogin.clicked.connect(
-            self.iniciar_sesion
+        self.login.btnLogin.clicked.connect(
+            self.validar_login
         )
 
-        self.vista_login.btnVolver.clicked.connect(
-            self.volver_bienvenida
+        self.login.btnVolver.clicked.connect(
+            self.volver_main
         )
 
-        # =========================
-        # IMÁGENES MÉDICAS
-        # =========================
+        self.principal.btnCapturarFoto.clicked.connect(
+            self.capturar_foto
+        )
 
-        self.vista_principal.btnCargarDicom.clicked.connect(
+        self.principal.btnCargarDicom.clicked.connect(
             self.cargar_dicom
         )
 
-        self.vista_principal.btnConvertirNifti.clicked.connect(
+        self.principal.btnConvertirNifti.clicked.connect(
             self.convertir_nifti
         )
 
-        self.vista_principal.btnGuardarCSV.clicked.connect(
+        self.principal.btnGuardarCSV.clicked.connect(
             self.guardar_csv
         )
 
-        self.vista_principal.btnGuardarExcel.clicked.connect(
-            self.guardar_excel
-        )
+    # =====================================
+    # NAVEGACION
+    # =====================================
 
-        self.vista_principal.btnZoom.clicked.connect(
-            self.aplicar_zoom
-        )
+    def mostrar_main(self):
 
-        self.vista_principal.btnGuardarRecorte.clicked.connect(
-            self.guardar_recorte
-        )
-
-        self.vista_principal.btnSegmentar.clicked.connect(
-            self.segmentar
-        )
-
-        self.vista_principal.btnMorfologia.clicked.connect(
-            self.morfologia
-        )
-
-        # =========================
-        # SEÑALES BIOMÉDICAS
-        # =========================
-
-        self.vista_principal.btnCargarMat.clicked.connect(
-            self.cargar_mat
-        )
-
-        self.vista_principal.btnMostrarCanales.clicked.connect(
-            self.mostrar_canales
-        )
-
-        self.vista_principal.btnAgregarRuido.clicked.connect(
-            self.agregar_ruido
-        )
-
-        self.vista_principal.btnEstadisticas.clicked.connect(
-            self.calcular_estadisticas
-        )
-
-        # =========================
-        # DATOS TABULARES
-        # =========================
-
-        self.vista_principal.btnCargarDatos.clicked.connect(
-            self.cargar_datos
-        )
-
-        self.vista_principal.btnGraficar.clicked.connect(
-            self.graficar_columnas
-        )
-
-        self.vista_principal.btnScatter.clicked.connect(
-            self.graficar_scatter
-        )
-
-    # ==================================
-    # NAVEGACIÓN
-    # ==================================
-
-    def iniciar(self):
-        self.vista_bienvenida.show()
+        self.main.show()
 
     def abrir_login(self):
 
-        self.vista_bienvenida.hide()
-        self.vista_login.show()
+        self.main.hide()
+        self.login.show()
 
-    def volver_bienvenida(self):
+    def volver_main(self):
 
-        self.vista_login.hide()
-        self.vista_bienvenida.show()
+        self.login.hide()
+        self.main.show()
 
-    def iniciar_sesion(self):
+    def cerrar_app(self):
 
-        usuario = self.vista_login.txtUsuario.text()
-        password = self.vista_login.txtPassword.text()
+        self.main.close()
 
-        if usuario != "" and password != "":
+    # =====================================
+    # LOGIN
+    # =====================================
 
-            self.vista_login.hide()
+    def validar_login(self):
 
-            self.vista_principal.txtUsuarioSesion.setText(usuario)
+        usuario = self.login.txtUsuario.text()
 
-            self.vista_principal.show()
+        password = self.login.txtPassword.text()
 
-    def salir(self):
+        resultado = self.modelo_db.validar_usuario(
+            usuario,
+            password
+        )
 
-        self.vista_bienvenida.close()
+        if resultado:
 
-    # ==================================
-    # IMÁGENES MÉDICAS
-    # ==================================
+            self.id_usuario_actual = resultado[0]
+
+            self.principal.txtUsuarioSesion.setText(
+                str(resultado[1])
+            )
+
+            self.principal.txtRolSesion_2.setText(
+                str(resultado[2])
+            )
+
+            self.principal.txtFechaSesion.setText(
+                datetime.now().strftime(
+                    "%d/%m/%Y %H:%M"
+                )
+            )
+
+            self.login.hide()
+            self.principal.show()
+
+        else:
+
+            self.login.lblMensaje.setText(
+                "Usuario o contraseña incorrectos"
+            )
+
+    # =====================================
+    # FOTO
+    # =====================================
+
+    def capturar_foto(self):
+
+        pass
+
+    # =====================================
+    # DICOM
+    # =====================================
 
     def cargar_dicom(self):
-        print("Cargar DICOM")
+
+        pass
 
     def convertir_nifti(self):
-        print("Convertir NIFTI")
+
+        pass
 
     def guardar_csv(self):
-        print("Guardar CSV")
 
-    def guardar_excel(self):
-        print("Guardar Excel")
-
-    def aplicar_zoom(self):
-        print("Zoom")
-
-    def guardar_recorte(self):
-        print("Guardar recorte")
-
-    def segmentar(self):
-        print("Segmentar")
-
-    def morfologia(self):
-        print("Morfología")
-
-    # ==================================
-    # SEÑALES BIOMÉDICAS
-    # ==================================
-
-    def cargar_mat(self):
-        print("Cargar MAT")
-
-    def mostrar_canales(self):
-        print("Mostrar canales")
-
-    def agregar_ruido(self):
-        print("Agregar ruido")
-
-    def calcular_estadisticas(self):
-        print("Calcular estadísticas")
-
-    # ==================================
-    # DATOS TABULARES
-    # ==================================
-
-    def cargar_datos(self):
-        print("Cargar datos")
-
-    def graficar_columnas(self):
-        print("Graficar columnas")
-
-    def graficar_scatter(self):
-        print("Scatter")
+        pass
