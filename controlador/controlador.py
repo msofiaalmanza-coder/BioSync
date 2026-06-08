@@ -171,6 +171,14 @@ class Controlador:
         except Exception as e:
                 print(f"ERROR DICOM: {e}")
                 QMessageBox.critical(self.principal, "Error DICOM", str(e))
+        self.archivos = dicoms
+        self.volumen_3d = np.stack([d.pixel_array for d in dicoms])
+
+        print("PixelSpacing:", self.obtener_pixel_spacing())
+        print("SliceThickness:", self.obtener_slice_thickness())
+        print("Volumen:", self.volumen_3d.shape)
+
+        return self.volumen_3d
 
     def actualizar_axial(self, indice):
         if self.modelo_dicom.volumen_3d is None:
