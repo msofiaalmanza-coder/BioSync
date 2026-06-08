@@ -185,7 +185,9 @@ class Controlador:
             return
         corte = self.modelo_dicom.corte_coronal(indice)
         norm = self.modelo_dicom.normalizar(corte)
-        norm = np.rot90(np.flipud(norm))
+        norm = cv2.resize(norm, (norm.shape[1], norm.shape[1]), 
+                        interpolation=cv2.INTER_LINEAR)
+        norm = np.rot90(norm)
         self.mostrar_imagen(norm, self.principal.lblCoronal_2)
 
     def actualizar_sagital(self, indice):
@@ -193,7 +195,9 @@ class Controlador:
             return
         corte = self.modelo_dicom.corte_sagital(indice)
         norm = self.modelo_dicom.normalizar(corte)
-        norm = np.rot90(np.flipud(norm))
+        norm = cv2.resize(norm, (norm.shape[1], norm.shape[1]), 
+                        interpolation=cv2.INTER_LINEAR)
+        norm = np.rot90(norm)
         self.mostrar_imagen(norm, self.principal.lblSagital_2)
 
     def convertir_nifti(self):
